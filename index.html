@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMHc3ME4gG3QkG2Qf2Y5H9u6ubG9U5s4/0w3m" crossorigin="anonymous">
+  
+  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forest BBA</title>
+
+    <!-- Favicon -->
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/logoo.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/logoo.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/logoo.png"
+    />
+    <link rel="manifest" href="images/logoo.png" />
+    <link
+      rel="mask-icon"
+      href="images/logoo.png"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="images/logoo.png"  />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="images/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- End: Favicon -->
+
+    <!-- Required Social Preview MetaTags -->
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="HeyU Landing Page — #2 PSD To HTML Coversion" />
+    <meta
+      name="description"
+      content="HeyU is an open source single page App Landing page website PSD to HTML template. This is my #2 PSD To HTML Conversion. Best of Luck To Me ☻"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alnahian2003.github.io/heyu" />
+    <meta
+      property="og:title"
+      content="HeyU Landing Page — #2 PSD To HTML Coversion"
+    />
+    <meta
+      property="og:description"
+      content="HeyU is an open source single page App Landing page website PSD to HTML template. This is my #2 PSD To HTML Conversion. Best of Luck To Me ☻"
+    />
+    <meta property="og:image" content="images/preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://alnahian2003.github.io/heyu"
+    />
+    <meta
+      property="twitter:title"
+      content="HeyU Landing Page — #2 PSD To HTML Coversion"
+    />
+    <meta
+      property="twitter:description"
+      content="HeyU is an open source single page App Landing page website PSD to HTML template. This is my #2 PSD To HTML Conversion. Best of Luck To Me ☻"
+    />
+    <meta property="twitter:image" content="images/preview.png" />
+
+    <!-- End of Required Social Preview MetaTags -->
+
+    <!-- LATO — Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- End: LATO — Google Font -->
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <!-- End: Main CSS File -->
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
+    <!-- Preloader End -->
+    <!-- Header Section -->
+    <header id="home">
+      <nav>
+        <div class="navbar-logo">
+          <a href="#" class="logo">FORESTBBA</a>
+        </div>
+        <div id="navbar">
+          <ul>
+            <li><a href="#home">ACCUEIL  </a></li>
+            <li><a href="#features">FONCTIONNALITÉS  </a></li>
+            <li><a href="#howto">À QUI S'ADRESSE</a></li>
+            <li><a href="#download">À PROPOS</a></li>
+          </ul>
+        </div>
+        <div id="mobileNav">
+          <span onclick="openNav()">&#9776;</span>
+        </div>
+        <div id="myNav" class="mobileNavOverlay">
+          <div class="overlay-content">
+            <a href="javascript:void()" class="close-btn" onclick="closeNav()"
+              >&times;</a
+            >
+            <a href="#home" onclick="closeNav()">HOME</a>
+            <a href="#features" onclick="closeNav()">FEATURES</a>
+            <a href="#howto" onclick="closeNav()">HOW TO</a>
+            <a href="#download" onclick="closeNav()">DOWNLOAD</a>
+          </div>
+        </div>
+      </nav>
+      <div id="hero">
+        <div class="row">
+          <div class="col span_1_of_2">
+            <div class="hero-description">
+              <h1>
+                Écologique, précis <br />
+                & convivial
+              </h1>
+              <p>
+                Avec <span class="bold-text">FORESTBBA</span>, protégez les
+                forêts et découvrez facilement la faune et la flore de Bordj Bou
+                Arréridj
+              </p>
+
+              <a  class="btn" onclick="showPopup()">Download Now</a>
+
+              <!-- تداخل الخلفية للنافذة المنبثقة -->
+              <div class="popup-overlay" id="popupOverlay" onclick="closePopup()"></div>
+              
+              <!-- النافذة المنبثقة -->
+              <div class="popup" id="popup">
+                <p>Le nouveau mise à jour est bientôt disponible !</p>
+                <button class="close-btn" onclick="closePopup()">Fermer</button>
+              </div>
+              
+              <script>
+                // عرض النافذة المنبثقة
+                function showPopup() {
+                  document.getElementById("popup").style.display = "block";
+                  document.getElementById("popupOverlay").style.display = "block";
+                }
+              
+                // إغلاق النافذة المنبثقة
+                function closePopup() {
+                  document.getElementById("popup").style.display = "none";
+                  document.getElementById("popupOverlay").style.display = "none";
+                }
+              </script>
+            </div>
+          </div>
+          <div class="col span_1_of_2">
+            <img class="hero-img" src="images/photooo.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="shape-divider">
+        <div class="custom-shape-divider-bottom-1603385849">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <button onclick="topFunction()" id="scrollUp" title="Go to top">
+        &#8593; <!-- هذا رمز السهم لأعلى -->
+      </button>
+      </button>
+    </header>
+    <!-- End: Header Section -->
+
+    <!-- Features Section -->
+    <section id="features">
+      <div class="row">
+        <div class="col span_1_of_2">
+          <div class="features-images animate__animated animate__fadeInLeft">
+            <img class="features_1" src="images/hh.png" alt="" />
+          </div>
+        </div>
+        <div class="col span_1_of_2">
+          <div
+            class="section-description features-description col1 animate__animated animate__fadeInRight"
+          >
+            <h2 class="stylish_heading">
+              Explorez la nature et échangez avec les experts
+              <span class="red_dot">.</span>
+            </h2>
+            <p class="little-description">
+              Avec Forestbba, explorez facilement les publications des experts
+              sur la faune et la flore locales. Recherchez des espèces
+              spécifiques, visualisez des photos, lisez des descriptions
+              détaillées et interagissez avec les chasseurs et les agents
+              forestiers à travers les commentaires. En un clic, localisez les
+              espèces sur la carte grâce au GPS !
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row second-features-row">
+        <div class="col span_1_of_2">
+          <div
+            style="margin-bottom: 70px"
+            class="section-description features-description animate__animated animate__fadeInLeft"
+          >
+            <h2 class="stylish_heading">
+              Numérisez la nature et gardez le contrôle de votre compte
+              <span class="red_dot">.</span>
+            </h2>
+            <p class="little-description">
+              Avec  Forestbba, les experts peuvent enrichir l'application en
+              numérisant la flore et la faune de Bordj Bou Arréridj, ajoutant
+              des informations précises incluant des photos, des descriptions,
+              et la localisation grâce au GPS. Vous pouvez également gérer
+              facilement votre compte : modifier votre adresse e-mail ou mot de
+              passe, choisir la langue (français, arabe ou anglais), ou
+              supprimer votre compte définitivement.
+            </p>
+          </div>
+        </div>
+        <div class="col span_1_of_2">
+          <div class="features-images animate__animated animate__fadeInRight">
+            <img class="features_3" src="images/phot3.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="row third-features-row">
+        <div class="col span_1_of_2">
+          <div class="features-images animate__animated animate__fadeInLeft">
+            <img class="features_4" src="images/photooo3.png" alt="" />
+          </div>
+        </div>
+        <div class="col span_1_of_2">
+          <div
+            class="section-description features-description animate__animated animate__fadeInRight"
+          >
+            <h2 class="stylish_heading">
+              Gestion efficace de l'application par les administrateurs
+              <span class="red_dot">.</span>
+            </h2>
+            <p class="little-description">
+              La fonctionnalité des comptes administrateurs permet aux agents
+              des forêts de gérer efficacement l'application. Les
+              administrateurs peuvent créer de nouveaux comptes pour les
+              utilisateurs, supprimer des comptes anciens si nécessaire, ce qui
+              améliore l'expérience utilisateur. Ils ont également la capacité
+              de supprimer des publications ou des commentaires inappropriés,
+              garantissant ainsi un contenu propre et fiable sur l'application.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: Features Section -->
+
+    <!-- Testimonial Section -->
+    <section id="testimonial">
+      <h2 class="stylish_heading">
+        Forestbba : L'application qui sert tout le monde
+        <span class="red_dot">.</span>
+      </h2>
+    </section>
+    <!-- End: Testimonial Section -->
+
+    <!-- How To Section -->
+    <section id="howto">
+      <div class="row">
+        <div class="col span_1_of_3 first-col">
+          <div class="first-item">
+            <div class="item-description">
+              <h4>Agents des forêts</h4>
+              <p>
+                Forestbba est spécialement conçu pour les agents des forêts afin
+                de les aider à surveiller et protéger la flore et la faune. Ils
+                peuvent ajouter des informations précises, utiliser la
+                technologie GPS pour localiser les espèces, et interagir avec
+                les données pour améliorer la gestion des ressources naturelles
+                de la ville.
+              </p>
+            </div>
+            <div class="item-icon1">
+            </div>
+          </div>
+          <div class="first-item">
+            <div class="item-description">
+              <h4>Chasseurs</h4>
+              <p>
+                Forestbba est l'outil idéal pour les chasseurs, leur permettant
+                de suivre les lieux de chasse, de connaître les espèces
+                disponibles, et de partager leurs expériences avec la communauté
+                des chasseurs. Ils peuvent également bénéficier d'informations
+                utiles sur les environnements environnants et les zones les plus
+                productives.
+              </p>
+            </div>
+            <div class="item-icon1">
+            </div>
+          </div>
+        </div>
+        <div class="col span_1_of_3 second-col">
+          <img class="big_image" src="images/photo2.png" alt="" />
+        </div>
+        <div class="col span_1_of_3 third-col">
+          <div class="last-item">
+            <div class="item-icon2">
+              
+            </div>
+            <div class="item-description">
+              <h4>Photographes</h4>
+              <p>
+                Pour les photographes,  Forestbba offre une plateforme parfaite
+                pour explorer la nature et capturer des images époustouflantes
+                des plantes et des animaux. Ils peuvent partager leurs œuvres
+                avec la communauté, ajouter des commentaires, et interagir avec
+                des experts de la nature pour améliorer leurs compétences et
+                découvrir de nouveaux lieux.
+              </p>
+            </div>
+          </div>
+          <div class="last-item">
+            <div class="item-icon2">
+
+            </div>
+            <div class="item-description">
+              <h4>Habitants de la ville et visiteurs</h4>
+              <p>
+                Forestbba vise à permettre aux habitants de la ville et aux
+                visiteurs d'explorer la beauté de la nature à Bordj Bou
+                Arréridj. Ils peuvent découvrir les plantes et les animaux
+                locaux, bénéficier d'informations précieuses sur l'environnement
+                environnant, et participer à des activités et des initiatives
+                écologiques. L'application leur offre l'occasion d'interagir
+                avec la communauté locale et de contribuer aux efforts de
+                protection de la flore et de la faune.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: How To Section -->
+
+    <!-- Download The App Section -->
+    <section id="download">
+      <div class="row">
+        <img class="app-logo" src="images/logoo.png" alt="" />
+        
+        <p class="">
+          Dans la ville de Bordj Bou Arréridj, la protection de l'environnement et la préservation de la biodiversité végétale et animale sont essentielles pour garantir la durabilité de l'écosystème. Cela nécessite de sensibiliser la population à l'importance de la diversité biologique et de mettre en œuvre des initiatives communautaires telles que la plantation d'arbres et le nettoyage des espaces naturels. L'application " Forestbba" se présente comme un outil innovant visant à atteindre cet objectif en fournissant une plateforme pour suivre les espèces locales et encourager la participation active des pêcheurs et des agents de la conservation forestière. Grâce à la collaboration de tous les membres de la communauté, nous pouvons préserver ces ressources naturelles et garantir un environnement sain pour les générations futures.
+        </p>
+        <h2 class="stylish_heading">
+          Développée par Abdelhafid MECHRI
+ <span class="red_dot">.</span>
+        </h2>
+
+      
+      </div>
+    </section>
+    <!-- End: Download The App Section -->
+
+    <!-- Footer Section -->
+    <section id="footer">
+      <div class="links">
+        <ul>
+          <li><a href="#home">ACCUEIL</a></li>
+          <li><a href="#features">FONCTIONNALITÉS</a></li>
+          <li><a href="#howto">À QUI S'ADRESSE</a></li>
+          <li><a href="#download">À PROPOS</a></li>
+        </ul>
+      </div>
+     
+    </section>
+    <!-- End: Footer Section -->
+
+    <!-- Required JavaScript Files & CDN -->
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Main JS Files -->
+    <script src="js/essential.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
